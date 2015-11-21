@@ -1,9 +1,11 @@
 FROM ubuntu
 
+COPY install-texlive.sh /tmp/install-texlive.sh
+
 RUN apt-get update -y
 RUN apt-get install -y wget git curl
 
-RUN source install-texlive.sh
+RUN /tmp/install-texlive.sh
 
 # RUN apt-get install texlive-full -y
 
