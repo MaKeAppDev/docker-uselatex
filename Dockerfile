@@ -1,11 +1,11 @@
 FROM ubuntu
 
 RUN apt-get update -y
-RUN apt-get install -y wget git
+RUN apt-get install -y wget git curl
 
-#RUN source install-texlive.sh
+RUN source install-texlive.sh
 
-RUN apt-get install texlive-full -y
+# RUN apt-get install texlive-full -y
 
 RUN apt-get install -y cmake
 RUN wget https://raw.githubusercontent.com/kmorel/UseLATEX/master/UseLATEX.cmake
