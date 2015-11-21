@@ -18,4 +18,4 @@ rm -rf install-tl-*
 
 # Set PATH
 export PATH=$PATH:/usr/local/texlive/2014/bin/x86_64-linux/
-echo "export PATH=$PATH:/usr/local/texlive/2014/bin/x86_64-linux/" | sudo tee -a /etc/profile
+echo "export PATH=$PATH:/usr/local/texlive/2014/bin/x86_64-linux/" >> /etc/profile
