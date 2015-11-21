@@ -6,9 +6,9 @@ COPY texlive.profile /tmp/texlive.profile
 RUN apt-get update -y
 RUN apt-get install -y wget git curl
 
-RUN /tmp/install-texlive.sh
+# RUN /tmp/install-texlive.sh
 
-# RUN apt-get install texlive-full -y
+RUN apt-get install texlive-full imagemagick -y
 
 RUN apt-get install -y cmake
 RUN wget https://raw.githubusercontent.com/kmorel/UseLATEX/master/UseLATEX.cmake
