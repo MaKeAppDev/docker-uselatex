@@ -15,3 +15,4 @@ RUN mv UseLATEX.cmake /usr/share/cmake-3.5/Modules/
 RUN wget https://github.com/latex4ei/latex4ei-packages/archive/master.zip
 RUN unzip master.zip
 RUN mv latex4ei-packages-master /usr/share/texlive/texmf-dist/tex/latex/latex4ei
+RUN mktexlsr
