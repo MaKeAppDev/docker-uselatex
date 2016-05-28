@@ -3,6 +3,7 @@
 - texlive-full
 - cmake
 - UseLATEX.cmake
+- [LaTeX4Ei](https://github.com/latex4ei/latex4ei-packages)
 
 ### Sample Usage
 ```
