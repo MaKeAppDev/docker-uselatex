@@ -6,6 +6,12 @@ RUN apt-get install -y wget git curl zip
 # Install Texlive
 RUN apt-get install texlive-full imagemagick -y
 
+# Install important fix of titlesec package
+RUN wget http://mirrors.ctan.org/macros/latex/contrib/titlesec.zip
+RUN unzip titlesec.zip
+RUN rm -r /usr/share/texlive/texmf-dist/tex/latex/titlesec
+RUN mv titlesec /usr/share/texlive/texmf-dist/tex/latex/.
+
 # Install Cmake with UseLATEX.cmake
 RUN apt-get install -y cmake
 RUN wget https://raw.githubusercontent.com/kmorel/UseLATEX/master/UseLATEX.cmake
