@@ -1,7 +1,7 @@
 FROM ubuntu
 
 RUN apt-get update -y
-RUN apt-get install -y wget git curl zip
+RUN apt-get install -y wget git zip
 
 # Install Texlive
 RUN apt-get install texlive-full imagemagick -y
