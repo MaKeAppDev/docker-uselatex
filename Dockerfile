@@ -1,4 +1,5 @@
-FROM ubuntu
+FROM ubuntu:latest
+MAINTAINER makeappdev <support@makeappdev.com>
 
 RUN apt-get update -y
 RUN apt-get install -y wget git zip

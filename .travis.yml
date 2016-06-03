@@ -1,0 +1,10 @@
+sudo: required
+
+services:
+  - docker
+
+script:
+  - docker build -t makeappdev .
+  - docker run -d makeappdev
+  - docker ps -a
+  - docker run makeappdev /bin/sh -c "cmake --version; pdflatex --version"
