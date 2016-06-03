@@ -3,8 +3,13 @@ sudo: required
 services:
   - docker
 
-script:
+install:
   - docker build -t makeappdev .
   - docker run -d makeappdev
+
+script:
   - docker ps -a
   - docker run makeappdev /bin/sh -c "cmake --version; pdflatex --version"
+
+notifications:
+  email: false
