@@ -1,5 +1,4 @@
 FROM ubuntu:latest
-MAINTAINER makeappdev <support@makeappdev.com>
 
 RUN apt-get update -y
 RUN apt-get install -y wget git zip
@@ -15,8 +14,9 @@ RUN mv titlesec /usr/share/texlive/texmf-dist/tex/latex/.
 
 # Install Cmake with UseLATEX.cmake
 RUN apt-get install -y cmake
+RUN CMAKE_ROOT=$(cmake --system-information | grep "CMAKE_ROOT " | cut -d' ' -f 2 | cut -d'"' -f2)
 RUN wget https://raw.githubusercontent.com/kmorel/UseLATEX/master/UseLATEX.cmake
-RUN mv UseLATEX.cmake /usr/share/cmake-3.5/Modules/
+RUN mv UseLATEX.cmake $CMAKE_ROOT/Modules/
 
 # Install custom LaTeX4Ei package
 RUN wget https://github.com/latex4ei/latex4ei-packages/archive/master.zip
