@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM rikose/gcc-cmake:latest
 
 RUN apt-get update -y
 RUN apt-get install -y wget git zip
