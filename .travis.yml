@@ -9,7 +9,7 @@ install:
 
 script:
   - docker ps -a
-  - docker run makeappdev /bin/sh -c "cmake --version; pdflatex --version"
+  - docker run makeappdev /bin/sh -c "cmake --version; pdflatex --version; gcc --version; uname -a"
 
 notifications:
   email: false
