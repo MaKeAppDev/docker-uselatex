@@ -1,8 +1,10 @@
 FROM rikorose/gcc-cmake:latest
 
 # Install Texlive and tools
-RUN apt update -y \
-    && apt install -y wget git zip texlive-full imagemagick
+RUN apt-get update && \
+    apt-get install --no-install-recommends -y \
+    wget git zip texlive-full imagemagick && \
+    rm -rf /var/lib/apt/lists/*
 
 # Install UseLATEX.cmake
 RUN wget https://gitlab.kitware.com/kmorel/UseLATEX/raw/master/UseLATEX.cmake \
