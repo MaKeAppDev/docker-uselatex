@@ -1,6 +1,6 @@
 # UseLaTeX.cmake Docker Container
 
-[![Build Status](https://travis-ci.org/MaKeAppDev/docker-uselatex.svg?branch=master)](https://travis-ci.org/MaKeAppDev/docker-uselatex)
+[![Actions Status](https://github.com/MaKeAppDev/docker-uselatex/workflows/CI/badge.svg)](https://github.com/MaKeAppDev/docker-uselatex)
 [![Docker Pulls](https://img.shields.io/docker/pulls/makeappdev/uselatex.svg)](https://hub.docker.com/r/makeappdev/uselatex/)
 [![Layers](https://shields.beevelop.com/docker/image/layers/makeappdev/uselatex/latest.svg)](https://hub.docker.com/r/makeappdev/uselatex/builds)
 [![Size](https://shields.beevelop.com/docker/image/image-size/makeappdev/uselatex/latest.svg)](https://hub.docker.com/r/makeappdev/uselatex/tags)
