@@ -10,6 +10,6 @@
 
 - texlive-full
 - imagemagick
-- cmake
-- UseLATEX.cmake
+- CMake
+- [UseLATEX.cmake](https://gitlab.kitware.com/kmorel/UseLATEX)
 - [LaTeX4Ei](https://github.com/latex4ei/latex4ei-packages)

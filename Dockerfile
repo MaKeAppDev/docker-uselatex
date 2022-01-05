@@ -7,7 +7,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 # Install UseLATEX.cmake
-RUN wget https://gitlab.kitware.com/kmorel/UseLATEX/raw/master/UseLATEX.cmake \
+RUN wget https://gitlab.kitware.com/kmorel/UseLATEX/raw/main/UseLATEX.cmake \
     && CMAKE_ROOT=$(cmake --system-information | grep "CMAKE_ROOT " | cut -d' ' -f 2 | cut -d'"' -f2) \
     && mv UseLATEX.cmake $CMAKE_ROOT/Modules/
 
@@ -17,4 +17,3 @@ RUN wget https://github.com/latex4ei/latex4ei-packages/archive/master.zip \
     && rm master.zip \
     && mv latex4ei-packages-master /usr/local/texlive/texmf-local/tex/latex/local/latex4ei \
     && mktexlsr
-
