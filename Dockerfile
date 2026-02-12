@@ -7,7 +7,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 # Install UseLATEX.cmake
-RUN wget https://gitlab.kitware.com/kmorel/UseLATEX/raw/main/UseLATEX.cmake \
+RUN wget https://gitlab.kitware.com/kmorel/UseLATEX/-/raw/main/UseLATEX.cmake \
     && CMAKE_ROOT=$(cmake --system-information | grep "CMAKE_ROOT " | cut -d' ' -f 2 | cut -d'"' -f2) \
     && mv UseLATEX.cmake $CMAKE_ROOT/Modules/
 
