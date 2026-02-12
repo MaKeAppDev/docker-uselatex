@@ -13,3 +13,17 @@
 - CMake
 - [UseLATEX.cmake](https://gitlab.kitware.com/kmorel/UseLATEX)
 - [LaTeX4Ei](https://github.com/latex4ei/latex4ei-packages)
+
+## Testing
+
+Build the Docker image:
+
+```bash
+docker build . --tag uselatex:ci
+```
+
+Run the integration test (clones `CheatsheetTemplate` inside the container and builds it via CMake/Make):
+
+```bash
+scripts/test-image.sh uselatex:ci
+```
